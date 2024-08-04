@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(value = "${song.service.name}", url = "${song.service.url}")
+@FeignClient(value = "${song.service.name}", path = "/api/songs")
 public interface SongServiceClient {
 
     @GetMapping("/{id}")
